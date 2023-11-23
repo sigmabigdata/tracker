@@ -19,13 +19,13 @@ public class Error {
         System.out.println("Компьютер включен: " + active);
         System.out.println("Статус: " + status);
         System.out.println("Ошибка: " + message);
+        System.out.println();
     }
 
     public static void main(String[] args) {
         Error error = new Error(true, 1, "Отказ системы");
         Error error2 = new Error();
         error.printInfo();
-        System.out.println();
         error2.printInfo();
     }
 }
