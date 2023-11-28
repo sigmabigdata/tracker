@@ -1,11 +1,9 @@
 package ru.inheritance;
 
-public class PizzaExtraCheeseExtraTomato extends Pizza {
-
-    private static final String TOPPING_TOMATO = " + extra cheese + extra tomato";
+public class PizzaExtraCheeseExtraTomato extends PizzaExtraCheese {
 
     @Override
     public String name() {
-        return super.name() + TOPPING_TOMATO;
+        return super.name() + " + extra tomato";
     }
 }
