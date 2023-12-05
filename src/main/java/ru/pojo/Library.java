@@ -1,16 +1,12 @@
 package ru.pojo;
 
-public class Library extends Book {
+public class Library {
 
     public static void main(String[] args) {
-        Book fire = new Book();
-        Book ice = new Book();
-        Book wind = new Book();
-        Book cleanCode = new Book();
-        fire.setName("Fire");
-        ice.setName("Ice");
-        wind.setName("Wind");
-        cleanCode.setName("Clean Code");
+        Book fire = new Book("Fire");
+        Book ice = new Book("Ice");
+        Book wind = new Book("Wind");
+        Book cleanCode = new Book("Clean Code");
 
         Book[] library = new Book[4];
         library[0] = fire;
@@ -42,7 +38,7 @@ public class Library extends Book {
 
         for (int index = 0; index < library.length; index++) {
             Book lib = library[index];
-            if (lib.getName().equals("Clean Code")) {
+            if ("Clean Code".equals(lib.getName())) {
                 System.out.println(lib.getName());
             }
         }

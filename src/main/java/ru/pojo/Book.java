@@ -2,7 +2,11 @@ package ru.pojo;
 
 public class Book {
     private String name;
-    private int str;
+    private int pages;
+
+    public Book(String name) {
+        this.name = name;
+    }
 
     public String getName() {
         return name;
@@ -12,11 +16,11 @@ public class Book {
         this.name = name;
     }
 
-    public int getStr() {
-        return str;
+    public int getPages() {
+        return pages;
     }
 
-    public void setStr(int str) {
-        this.str = str;
+    public void setPages(int pages) {
+        this.pages = pages;
     }
 }
