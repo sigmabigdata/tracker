@@ -5,6 +5,6 @@ public class Main {
         Bus bus = new Bus();
         bus.drive();
         bus.passanger(5);
-        System.out.println("Стоимость топлива: " + bus.prise(100));
+        System.out.println("Стоимость топлива: " + bus.costOfFuel(100));
     }
 }
