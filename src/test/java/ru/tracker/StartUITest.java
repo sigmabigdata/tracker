@@ -1,10 +1,7 @@
 package ru.tracker;
 
 import org.junit.jupiter.api.Test;
-import ru.tracker.actions.Create;
-import ru.tracker.actions.Delete;
-import ru.tracker.actions.Exit;
-import ru.tracker.actions.Replace;
+import ru.tracker.actions.*;
 
 import static org.assertj.core.api.Assertions.assertThat;
 

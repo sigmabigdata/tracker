@@ -3,7 +3,6 @@ package ru.tracker.actions;
 import ru.tracker.Input;
 import ru.tracker.Output;
 import ru.tracker.Tracker;
-import ru.tracker.UserAction;
 
 public class Exit implements UserAction {
     private final Output output;
