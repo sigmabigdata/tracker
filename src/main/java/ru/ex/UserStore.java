@@ -12,18 +12,21 @@ public class UserStore {
     }
 
     public static boolean validate(User user) throws UserInvalidException {
-        if (user.isValid() && user.getUsername().length() > 3) {
-            return true;
+        if (!user.isValid()) {
+            throw new UserInvalidException("Пользователь не валидный");
         }
-        throw new UserInvalidException("Пользователь не валидный или имя менее 3 символов");
+        if (user.getUsername().length() < 3) {
+            throw new UserInvalidException("Имя пользователя короче 3 символов.");
+        }
+        return true;
     }
 
     public static void main(String[] args) {
+        User[] users = {new User("Иванов Иван", true)};
         try {
-            User[] users = {new User("ivan ivanov", true)};
-            User user = findUser(users, "ivan ivanov");
+            User user = findUser(users, "Иванов Иван");
             if (validate(user)) {
-                System.out.println("This user has an access");
+                System.out.println("Пользователь имеет доступ");
             }
         } catch (UserInvalidException en) {
             en.printStackTrace();
