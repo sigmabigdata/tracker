@@ -20,7 +20,8 @@ public final class SingleTracker {
     }
 
     public Item findById(int id) {
-        return null;
+
+        return tracker.findById(id);
     }
 
     public Item[] findAll() {
