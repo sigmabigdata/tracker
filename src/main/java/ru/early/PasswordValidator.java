@@ -30,7 +30,6 @@ public class PasswordValidator {
             }
         }
 
-
         for (char symbol : password.toCharArray()) {
             if (hasUpCase && hasLowCase && hasDigit && hasSpecial) {
                 break;
