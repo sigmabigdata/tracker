@@ -20,19 +20,19 @@ public class PasswordValidator {
         boolean hasLowCase = false;
         boolean hasDigit = false;
         boolean hasSpecial = false;
-        boolean exit = false;
+        String passToLowCase = password.toLowerCase();
 
         for (String forbidden : FORBIDDEN) {
-            if (password.toLowerCase().contains(forbidden)) {
+            if (passToLowCase.contains(forbidden)) {
                 throw new IllegalArgumentException(
                         "Password shouldn't contain substrings: qwerty, 12345, password, admin, user"
                 );
             }
         }
 
+
         for (char symbol : password.toCharArray()) {
             if (hasUpCase && hasLowCase && hasDigit && hasSpecial) {
-                exit = true;
                 break;
             }
             if (Character.isUpperCase(symbol)) {
