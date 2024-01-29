@@ -1,7 +1,5 @@
 package ru.oop;
 
-import javax.swing.text.Position;
-
 public class Jukebox {
     public void music(int position) {
         if (position == 1) {
