@@ -30,7 +30,7 @@ public final class SingleTracker {
     }
 
     public List<Item> findByName(String name) {
-        return List.of(tracker.findByName(name));
+        return tracker.findByName(name);
     }
 
     public boolean replace(String id, Item item) {
