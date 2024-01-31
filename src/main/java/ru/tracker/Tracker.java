@@ -29,7 +29,7 @@ public class Tracker {
                 copyItems.add(item);
             }
         }
-        return new ArrayList<>(copyItems);
+        return copyItems;
     }
 
     private int indexOf(int id) {

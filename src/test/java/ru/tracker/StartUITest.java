@@ -16,10 +16,10 @@ class StartUITest {
                 new String[]{"0", "Item name", "1"}
         );
         Tracker tracker = new Tracker();
-        List<UserAction> actions = new ArrayList<>(List.of(
+        List<UserAction> actions = List.of(
                 new Create(output),
                 new Exit(output)
-        ));
+        );
         new StartUI(output).init(input, tracker, actions);
         assertThat(tracker.findAll().get(0).getName()).isEqualTo("Item name");
     }
@@ -33,10 +33,10 @@ class StartUITest {
         Input input = new MockInput(
                 new String[]{"0", String.valueOf(item.getId()), replacedName, "1"}
         );
-        List<UserAction> actions = new ArrayList<>(List.of(
+        List<UserAction> actions = List.of(
                 new Replace(output),
                 new Exit(output)
-        ));
+        );
         new StartUI(output).init(input, tracker, actions);
         assertThat(tracker.findById(item.getId()).getName()).isEqualTo(replacedName);
     }
@@ -49,10 +49,10 @@ class StartUITest {
         Input input = new MockInput(
                 new String[]{"0", String.valueOf(item.getId()), "1"}
         );
-        List<UserAction> actions = new ArrayList<>(List.of(
+        List<UserAction> actions = List.of(
                 new Delete(output),
                 new Exit(output)
-        ));
+        );
         new StartUI(output).init(input, tracker, actions);
         assertThat(tracker.findById(item.getId())).isNull();
     }
@@ -66,10 +66,10 @@ class StartUITest {
         Input input = new MockInput(
                 new String[]{"0", String.valueOf(one.getId()), replaceName, "1"}
         );
-        List<UserAction> actions = new ArrayList<>(List.of(
+        List<UserAction> actions = List.of(
                 new Replace(output),
                 new Exit(output)
-        ));
+        );
         new StartUI(output).init(input, tracker, actions);
         String ln = System.lineSeparator();
         assertThat(output.toString()).isEqualTo(
@@ -94,10 +94,10 @@ class StartUITest {
         Input input = new MockInput(
                 new String[]{"0", String.valueOf(testName1.getId()), String.valueOf(testName2.getId()), "1"}
         );
-        List<UserAction> actions = new ArrayList<>(List.of(
+        List<UserAction> actions = List.of(
                 new FindAll(output),
                 new Exit(output)
-        ));
+        );
         new StartUI(output).init(input, tracker, actions);
         String ln = System.lineSeparator();
         assertThat(output.toString()).isEqualTo(
@@ -122,10 +122,10 @@ class StartUITest {
         Input input = new MockInput(
                 new String[]{"0", String.valueOf(one.getName()), "1"}
         );
-        List<UserAction> actions = new ArrayList<>(List.of(
+        List<UserAction> actions = List.of(
                 new FindByName(output),
                 new Exit(output)
-        ));
+        );
         new StartUI(output).init(input, tracker, actions);
         String ln = System.lineSeparator();
         assertThat(output.toString()).isEqualTo(
@@ -149,10 +149,10 @@ class StartUITest {
         Input input = new MockInput(
                 new String[]{"0", String.valueOf(one.getId()), "1"}
         );
-        List<UserAction> actions = new ArrayList<>(List.of(
+        List<UserAction> actions = List.of(
                 new FindById(output),
                 new Exit(output)
-        ));
+        );
         new StartUI(output).init(input, tracker, actions);
         String ln = System.lineSeparator();
         assertThat(output.toString()).isEqualTo(
