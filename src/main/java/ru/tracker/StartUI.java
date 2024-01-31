@@ -1,9 +1,6 @@
 package ru.tracker;
 
 import ru.tracker.actions.*;
-
-import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.List;
 
 public class StartUI {
