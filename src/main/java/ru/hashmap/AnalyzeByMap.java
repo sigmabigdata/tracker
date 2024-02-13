@@ -13,10 +13,7 @@ public class AnalyzeByMap {
                 totalSubjects++;
             }
         }
-        if (totalSubjects == 0) {
-            return 0;
-        }
-        return totalScore / totalSubjects;
+        return totalSubjects == 0 ? 0 : totalScore / totalSubjects;
     }
 
     public static List<Label> averageScoreByPupil(List<Pupil> pupils) {
