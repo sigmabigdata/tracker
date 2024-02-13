@@ -2,10 +2,22 @@ package ru.bank;
 
 import java.util.Objects;
 
+/**
+ * Класс описывает модель банковского счета. Эта модель содержит поля: баланс и реквизиты
+ */
 public class Account {
+    /**
+     * Поле содержит номер счета
+     */
     private String requisite;
+    /**
+     * Поле содержит баланс
+     */
     private double balance;
 
+    /**
+     * Конструктор модели банковского счета, включает в себя параметры : баланс и реквизиты.
+     */
     public Account(String requisite, double balance) {
         this.requisite = requisite;
         this.balance = balance;
