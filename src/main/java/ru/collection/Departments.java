@@ -8,11 +8,9 @@ public class Departments {
         Set<String> temp = new LinkedHashSet<>();
         for (String department : departments) {
             String[] subDep = department.split("/");
-            String code = subDep[0];
-            temp.add(code);
+            temp.add(subDep[0]);
             for (int i = 1; i < subDep.length; i++) {
-                code += "/" + subDep[i];
-                temp.add(code);
+                temp.add(subDep[0] += "/" + subDep[i]);
             }
         }
         return new ArrayList<>(temp);
